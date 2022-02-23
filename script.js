@@ -345,7 +345,7 @@ let isFalse = false;
 
 let isTralse = !( (!isFalse != !isFalse) && (isFalse !== isTrue) || (!isTrue != !isFalse) && (isFalse != !isTrue) )
 
-console.log(isTralse)
+//console.log(isTralse)
 
 
 // true != true 		//false
@@ -359,3 +359,209 @@ console.log(isTralse)
 // True
 
 
+/*
+	Selection Control Structure
+		- if else statement
+		- switch case
+*/
+
+	/*
+		If statement
+
+			syntax:
+				
+				if(condition){
+					//statement
+				}
+
+		let age = 18;
+
+		if(age >= 18){
+			console.log(`You are allowed to enter`);
+
+		} else {
+			console.log(`You are not allowed to enter`);
+		}
+	*/
+
+/*
+	Mini Activity
+
+	Create a conditional  statement that if height is below 150 cm, display "Below 150cm". If height is 150cm and above, display "Above 150cm".
+
+	**Stretch goal**
+		- Put the conditional statement inside a function
+		- Make use of parameter & argument
+
+
+	let height = 140;
+
+	if(height >= 150){
+		alert(`Above 150 cm`)
+	} else {
+		alert(`Below 150 cm`)
+	}
+
+	// or
+
+	function checkHeight(height){
+
+		if(height >= 150){
+			alert(`Above 150 cm`)
+		} else {
+			alert(`Below 150 cm`)
+		}
+	}
+
+	let myHeight = prompt('Enter your height');
+	checkHeight(myHeight)
+
+*/
+
+/*
+	Mini Activity
+
+	Create a function that accepts a name, and if the name equals to Romeo, display "Juliet" in the console. If the name is not equal to Romeo, display "Hamlet" in the console.
+
+
+function enterName(name){
+
+	if(name === "Romeo"){
+		console.log("Juliet");
+	} else {
+		console.log("Hamlet");
+	}
+}
+
+enterName("Joy");
+
+*/
+
+
+	/* 
+		if...else if...else statement 
+	
+
+		let price = 1000;
+
+		if(price <= 20){
+			console.log(`Affordable`);
+		} 
+
+		if(price > 20 && price <= 100){
+			console.log(`Pricey but still affordable`);
+		}
+
+		if(price > 100 && price <= 200){
+			console.log(`Not affordable at the moment`);
+		}
+
+		if(price > 200){
+			console.log(`Cannot afford at all`)
+		}
+	*/
+/*
+	Mini Activity
+
+	Determine the typhoon intentisty with the following data:
+
+	1. Windspeed of 30, display 'not a typhoon'
+	2. Windspeed of 61, display 'a tropical depression is detected'
+	3. Windspeed of 62-88, display 'a tropical storm is detected'
+	4. windspeed 89-117, display 'a severe tropical storm is detected'
+	5. beyond any windspeed, display 'cannot identify storm detected'
+
+	**stretch goal**
+		use a function
+
+	function typhoonIntentisity(windspeed){
+
+		if(windspeed <= 30){
+			console.log(`Not a typhoon`);
+
+		} else if(windspeed <= 61){
+			console.log(`A tropical depression is detected`);
+
+		} else if(windspeed >= 62 && windspeed <= 88){
+			console.log(`A tropical storm is detected`);
+
+		} else if(windspeed >= 89 && windspeed <= 117){
+			console.log(`A severe tropical storm is detected`);
+
+		} else {
+			console.log(`Cannot identify storm detected`);
+		}
+	}
+
+	typhoonIntentisity(118);
+*/
+
+
+/* Ternary Operator 
+	- shorthand of if else statement
+	- ? = if
+	- : = else
+	
+	sytax:
+
+		(condition) ? <statement> : <statement>
+
+
+	let myAge = 20;
+
+	myAge >= 18 ? console.log(`if`) : console.log(`else`)
+
+*/
+
+
+/*
+	Switch Statement
+
+	syntax:
+
+		switch(condition){
+			case <catorgory>: <statement>
+								break;
+			default: <statement>
+		}
+	let num = 2;
+
+	switch(num){
+		case 1: console.log(`1`);
+			break;
+		case 2: console.log(`2`);
+			break;
+		case 3: console.log(`3`);
+			break;
+		case 4: console.log(`4`);
+			break;
+		default: console.log(`not found`);
+	}
+
+	let user = prompt('Enter your role');
+
+	switch(user){
+		case `admin`: console.log(`has authorization`);
+			break;
+		case `employee`: console.log(`ask for authorization`);
+			break;
+		default: console.log(`no access`);
+	}
+
+*/
+	
+	function color(){
+
+		let text = document.getElementById('input').value
+		let element = document.getElementById('hello')
+
+		switch(text){
+			case `red`: element.style.color = `red`
+				break;
+			case `blue`: element.style.color = `blue`
+				break;
+			case `green`: element.style.color = `green`
+				break;
+			default: element.style.color = `pink`
+		}
+	}
